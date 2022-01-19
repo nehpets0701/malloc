@@ -44,5 +44,9 @@ typedef struct block_info_s
 #define GET_SIZE(p) ((((block_info *)(p))->size) & LSB_ZERO_MASK)
 #define GET_PREV(p) ((((block_info *)(p))->prev) & LSB_ZERO_MASK)
 
+void print_heap(void);
+void *naive_malloc(size_t size);
+void *_malloc(size_t size);
+void _free(void *ptr);
 
 #endif
